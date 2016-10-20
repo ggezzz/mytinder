@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RME-S6-vXJ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Light.ttf">
+            <string>Raleway-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="yWB-xn-D2R">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="231-td-Qap" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="o1Z-7S-IV0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tlk-pa-AU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-465" y="216"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="Fdl-ra-yE6">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="keP-Tw-1fq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="WgL-a3-S8u" customClass="MatchedListViewController" customModule="MyTinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Czl-ao-nwY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Az2-bH-HRS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x3d-5p-wdQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="143" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Afq-w6-yfs">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MatchedCell" rowHeight="143" id="WJq-Za-17I" customClass="MatchingViewCell" customModule="MyTinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="143"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WJq-Za-17I" id="qeg-If-C3s">
+                                            <frame key="frameInset" width="375" height="142"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bav-yX-1Fy">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="3Wb-TF-PeQ"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="A3T-Z4-pf9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="avatar-2" translatesAutoresizingMaskIntoConstraints="NO" id="bbS-ln-Chq">
+                                                    <frame key="frameInset" minX="27" width="110" height="102"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="102" id="Jrh-ec-mJo"/>
+                                                        <constraint firstAttribute="width" constant="110" id="sbj-gt-1ay"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="bav-yX-1Fy" secondAttribute="trailing" constant="22" id="GUS-4l-8Jc"/>
+                                                <constraint firstItem="bav-yX-1Fy" firstAttribute="top" secondItem="qeg-If-C3s" secondAttribute="topMargin" constant="8" id="Qmd-Sn-WVV"/>
+                                                <constraint firstItem="bav-yX-1Fy" firstAttribute="leading" secondItem="bbS-ln-Chq" secondAttribute="trailing" constant="5" id="ayM-3s-GTz"/>
+                                                <constraint firstItem="bav-yX-1Fy" firstAttribute="centerY" secondItem="qeg-If-C3s" secondAttribute="centerY" id="gcl-TX-ANR"/>
+                                                <constraint firstItem="bbS-ln-Chq" firstAttribute="top" secondItem="qeg-If-C3s" secondAttribute="top" id="w0x-c4-liB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageTxt" destination="bav-yX-1Fy" id="9uQ-XG-2b4"/>
+                                            <outlet property="profilePhoto" destination="bbS-ln-Chq" id="o86-UH-AdS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Az2-bH-HRS" firstAttribute="top" secondItem="Afq-w6-yfs" secondAttribute="bottom" id="1Y9-u8-odN"/>
+                            <constraint firstItem="Afq-w6-yfs" firstAttribute="leading" secondItem="x3d-5p-wdQ" secondAttribute="leading" id="KPP-Ic-YlB"/>
+                            <constraint firstItem="Afq-w6-yfs" firstAttribute="top" secondItem="Czl-ao-nwY" secondAttribute="bottom" id="We8-o1-9Vo"/>
+                            <constraint firstAttribute="trailing" secondItem="Afq-w6-yfs" secondAttribute="trailing" id="hpS-f5-zx1"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="LBP-fH-Ylc"/>
+                    <connections>
+                        <outlet property="tableView" destination="Afq-w6-yfs" id="pd9-s0-FLQ"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="84" y="143.47826086956522"/>
+        </scene>
+        <!--Collaborator View Controller-->
+        <scene sceneID="WJS-u3-M2x">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZA-tS-qoc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="HomeVC" id="kCC-h8-b74" customClass="CollaboratorViewController" customModule="MyTinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zav-wH-Y0s"/>
+                        <viewControllerLayoutGuide type="bottom" id="i5G-XQ-7dR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hVM-zD-FJb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iJB-aF-186"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1023.2" y="-510.49475262368821"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Iwp-XU-eX4">
+            <objects>
+                <tabBarController id="RME-S6-vXJ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="xmB-br-qSn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RX3-Nz-CUk" kind="relationship" relationship="viewControllers" id="LtH-Qr-L0W"/>
+                        <segue destination="WgL-a3-S8u" kind="relationship" relationship="viewControllers" id="6Ld-Fe-Kdf"/>
+                        <segue destination="231-td-Qap" kind="relationship" relationship="viewControllers" id="JuI-wi-kSD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7t1-JK-TS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-868" y="-183"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="tyE-VX-LKX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RX3-Nz-CUk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="syu-Sc-64U" userLabel="Home"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2of-is-NIK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kCC-h8-b74" kind="relationship" relationship="rootViewController" id="F3D-5v-suq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="apU-8Z-cOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="-510.49475262368821"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avatar-2" width="32" height="32"/>
+    </resources>
+</document>

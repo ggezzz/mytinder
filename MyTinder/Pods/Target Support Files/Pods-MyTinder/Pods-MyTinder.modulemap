@@ -1,0 +1,6 @@
+framework module Pods_MyTinder {
+  umbrella header "Pods-MyTinder-umbrella.h"
+
+  export *
+  module * { export * }
+}
